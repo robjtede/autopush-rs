@@ -279,7 +279,7 @@ dependencies = [
  "socket2",
  "time 0.2.25",
  "tinyvec",
- "url 2.2.0",
+ "url 2.2.1",
 ]
 
 [[package]]
@@ -434,7 +434,7 @@ dependencies = [
  "tempfile",
  "thiserror",
  "tokio 0.2.25",
- "url 2.2.0",
+ "url 2.2.1",
  "uuid 0.8.2",
  "validator",
  "validator_derive",
@@ -460,7 +460,7 @@ dependencies = [
  "futures-locks",
  "hex",
  "httparse",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "lazy_static",
  "log",
  "mozsvc-common",
@@ -504,7 +504,7 @@ dependencies = [
  "futures-backoff",
  "hex",
  "httparse",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "lazy_static",
  "log",
  "mozsvc-common",
@@ -529,7 +529,7 @@ dependencies = [
  "smallvec 1.6.1",
  "tokio-core",
  "tungstenite",
- "url 2.2.0",
+ "url 2.2.1",
  "uuid 0.8.2",
 ]
 
@@ -682,9 +682,9 @@ dependencies = [
 
 [[package]]
 name = "bumpalo"
-version = "3.6.0"
+version = "3.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "099e596ef14349721d9016f6b80dd3419ea1bf289ab9b44df8e4dfd3a005d5d9"
+checksum = "63396b8a4b9de3f4fdfb320ab6080762242f66a8ef174c49d8e19b674db4cdbe"
 
 [[package]]
 name = "byte-tools"
@@ -1772,9 +1772,9 @@ checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
 
 [[package]]
 name = "hyper"
-version = "0.12.35"
+version = "0.12.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9dbe6ed1438e1f8ad955a4701e9a944938e9519f6888d12d8558b645e247d5f6"
+checksum = "5c843caf6296fc1f93444735205af9ed4e109a539005abb2564ae1d6fad34c52"
 dependencies = [
  "bytes 0.4.12",
  "futures 0.1.30",
@@ -1866,7 +1866,7 @@ checksum = "3a800d6aa50af4b5850b2b0f659625ce9504df908e9733b635720483be26174f"
 dependencies = [
  "bytes 0.4.12",
  "futures 0.1.30",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "native-tls",
  "tokio-io",
 ]
@@ -1903,9 +1903,9 @@ dependencies = [
 
 [[package]]
 name = "idna"
-version = "0.2.1"
+version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de910d521f7cc3135c4de8db1cb910e0b5ed1dc6f57c381cd07e8e661ce10094"
+checksum = "89829a5d69c23d348314a7ac337fe39173b61149a9864deabd260983aed48c21"
 dependencies = [
  "matches",
  "unicode-bidi",
@@ -1941,7 +1941,7 @@ dependencies = [
  "bitmaps",
  "rand_core 0.5.1",
  "rand_xoshiro",
- "sized-chunks 0.6.3",
+ "sized-chunks 0.6.4",
  "typenum",
  "version_check",
 ]
@@ -2710,10 +2710,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3bbaa49075179162b49acac1c6aa45fb4dafb5f13cf6794276d77bc7fd95757b"
 dependencies = [
  "error-chain",
- "idna 0.2.1",
+ "idna 0.2.2",
  "lazy_static",
  "regex",
- "url 2.2.0",
+ "url 2.2.1",
 ]
 
 [[package]]
@@ -3041,7 +3041,7 @@ dependencies = [
  "flate2",
  "futures 0.1.30",
  "http 0.1.21",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "hyper-tls 0.3.2",
  "log",
  "mime",
@@ -3090,7 +3090,7 @@ dependencies = [
  "serde_urlencoded 0.7.0",
  "tokio 0.2.25",
  "tokio-tls",
- "url 2.2.0",
+ "url 2.2.1",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
@@ -3132,7 +3132,7 @@ dependencies = [
  "bytes 0.4.12",
  "futures 0.1.30",
  "http 0.1.21",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "hyper-tls 0.3.2",
  "lazy_static",
  "log",
@@ -3185,7 +3185,7 @@ dependencies = [
  "chrono",
  "dirs 1.0.5",
  "futures 0.1.30",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "lazy_static",
  "regex",
  "serde 1.0.123",
@@ -3256,7 +3256,7 @@ dependencies = [
  "hex",
  "hmac 0.7.1",
  "http 0.1.21",
- "hyper 0.12.35",
+ "hyper 0.12.36",
  "log",
  "md5",
  "percent-encoding 2.1.0",
@@ -3495,7 +3495,7 @@ dependencies = [
  "rustc_version",
  "sentry-types 0.14.1",
  "uname",
- "url 2.2.0",
+ "url 2.2.1",
 ]
 
 [[package]]
@@ -3588,7 +3588,7 @@ dependencies = [
  "failure",
  "serde 1.0.123",
  "serde_json",
- "url 2.2.0",
+ "url 2.2.1",
  "uuid 0.8.2",
 ]
 
@@ -3603,7 +3603,7 @@ dependencies = [
  "serde 1.0.123",
  "serde_json",
  "thiserror",
- "url 2.2.0",
+ "url 2.2.1",
  "uuid 0.8.2",
 ]
 
@@ -3815,9 +3815,9 @@ dependencies = [
 
 [[package]]
 name = "sized-chunks"
-version = "0.6.3"
+version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bca43dc3574a38d4090f492dd3ef0d589fc434916a5b40ffc75057595002141a"
+checksum = "65e65d6a9f13cd78f361ea5a2cf53a45d67cdda421ba0316b9be101560f3d207"
 dependencies = [
  "bitmaps",
  "typenum",
@@ -4601,9 +4601,9 @@ checksum = "360dfd1d6d30e05fda32ace2c8c70e9c0a9da713275777f5a4dbb8a1893930c6"
 
 [[package]]
 name = "tracing"
-version = "0.1.23"
+version = "0.1.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7d40a22fd029e33300d8d89a5cc8ffce18bb7c587662f54629e94c9de5487f3"
+checksum = "f77d3842f76ca899ff2dbcf231c5c65813dea431301d6eb686279c15c4464f12"
 dependencies = [
  "cfg-if 1.0.0",
  "log",
@@ -4646,14 +4646,14 @@ dependencies = [
  "backtrace",
  "enum-as-inner",
  "futures 0.3.12",
- "idna 0.2.1",
+ "idna 0.2.2",
  "lazy_static",
  "log",
  "rand 0.7.3",
  "smallvec 1.6.1",
  "thiserror",
  "tokio 0.2.25",
- "url 2.2.0",
+ "url 2.2.1",
 ]
 
 [[package]]
@@ -4706,7 +4706,7 @@ dependencies = [
  "log",
  "rand 0.7.3",
  "sha-1 0.8.2",
- "url 2.2.0",
+ "url 2.2.1",
  "utf-8",
 ]
 
@@ -4789,12 +4789,12 @@ dependencies = [
 
 [[package]]
 name = "url"
-version = "2.2.0"
+version = "2.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5909f2b0817350449ed73e8bcd81c8c3c8d9a7a5d8acba4b27db277f1868976e"
+checksum = "9ccd964113622c8e9322cfac19eb1004a07e636c545f325da085d5cdde6f1f8b"
 dependencies = [
  "form_urlencoded",
- "idna 0.2.1",
+ "idna 0.2.2",
  "matches",
  "percent-encoding 2.1.0",
  "serde 1.0.123",
@@ -4831,13 +4831,13 @@ version = "0.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "841d6937c33ec6039d8071bcf72933146b5bbe378d645d8fa59bdadabfc2a249"
 dependencies = [
- "idna 0.2.1",
+ "idna 0.2.2",
  "lazy_static",
  "regex",
  "serde 1.0.123",
  "serde_derive",
  "serde_json",
- "url 2.2.0",
+ "url 2.2.1",
  "validator_types",
 ]
 
@@ -5150,7 +5150,7 @@ dependencies = [
  "serde 1.0.123",
  "serde_json",
  "tokio 0.2.25",
- "url 2.2.0",
+ "url 2.2.1",
 ]
 
 [[package]]
