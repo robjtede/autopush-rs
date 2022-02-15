@@ -128,6 +128,11 @@ impl Router for FcmRouter {
             .await);
         }
 
+        // Use a successful send status as a proxy to Update the user record to set the last `connected_at` time for this user
+        self.ddb
+            .update_user(&notification.subscription.user)
+            .await?;
+
         // Sent successfully, update metrics and make response
         trace!("FCM request was successful");
         incr_success_metrics(&self.metrics, "fcmv1", app_id, notification);
@@ -202,7 +207,9 @@ mod tests {
     /// A notification with no data is sent to FCM
     #[tokio::test]
     async fn successful_routing_no_data() {
-        let ddb = MockDbClient::new().into_boxed_arc();
+        let mut mdb = MockDbClient::new();
+        mdb.expect_update_user().returning(|_| Ok(()));
+        let ddb = mdb.into_boxed_arc();
         let router = make_router(String::from_utf8(make_service_key()).unwrap(), ddb).await;
         let _token_mock = mock_token_endpoint();
         let fcm_mock = mock_fcm_endpoint_builder()

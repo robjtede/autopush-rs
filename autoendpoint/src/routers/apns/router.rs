@@ -269,6 +269,10 @@ impl Router for ApnsRouter {
                 .await);
         }
 
+        // Use a successful send status as a proxy to Update the user record to set the last `connected_at` time for this user
+        self.ddb
+            .update_user(&notification.subscription.user)
+            .await?;
         // Sent successfully, update metrics and make response
         trace!("APNS request was successful");
         incr_success_metrics(&self.metrics, "apns", channel, notification);
@@ -393,7 +397,9 @@ mod tests {
 
             Ok(apns_success_response())
         });
-        let ddb = MockDbClient::new().into_boxed_arc();
+        let mut mdb = MockDbClient::new();
+        mdb.expect_update_user().returning(|_| Ok(()));
+        let ddb = mdb.into_boxed_arc();
         let router = make_router(client, ddb);
         let notification = make_notification(default_router_data(), None, RouterType::APNS);
 

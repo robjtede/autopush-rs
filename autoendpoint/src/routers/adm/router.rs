@@ -122,6 +122,11 @@ impl Router for AdmRouter {
             }
         };
 
+        // Use a successful send status as a proxy to Update the user record to set the last `connected_at` time for this user
+        self.ddb
+            .update_user(&notification.subscription.user)
+            .await?;
+
         // Sent successfully, update metrics and make response
         trace!("ADM request was successful");
         incr_success_metrics(&self.metrics, "adm", profile, notification);
@@ -207,7 +212,9 @@ mod tests {
     /// A notification with no data is sent to ADM
     #[tokio::test]
     async fn successful_routing_no_data() {
-        let ddb = MockDbClient::new().into_boxed_arc();
+        let mut mdb = MockDbClient::new();
+        mdb.expect_update_user().returning(|_| Ok(()));
+        let ddb = mdb.into_boxed_arc();
         let router = make_router(ddb);
         let _token_mock = mock_token_endpoint();
         let adm_mock = mock_adm_endpoint_builder()
